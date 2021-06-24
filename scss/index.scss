@@ -1,0 +1,76 @@
+$purple: #8160D1;
+$purple-dark: #442889;
+
+.test-page {
+	padding: 50px 100px;
+}
+
+.test-page__content {
+	display: flex;
+	flex-direction: row;
+}
+
+.test-page__column {
+	width: 200px;
+	margin: 0 30px 0 0;
+
+	&.test-page__column_wide {
+		width: 300px;
+	}
+
+	&.test-page__column_narrow {
+		width: 150px;
+	}
+
+	.test-button {
+		margin-bottom: 10px;
+	}
+}
+
+.test-button {
+	background: $purple;
+	border: 2px solid $purple;
+	color: #ffffff;
+	border-radius: 8px;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-size: 14px;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	text-align: center;
+	outline: none;
+	white-space: nowrap;
+	display: inline-flex;
+	align-items: center;
+	vertical-align: middle;
+	transition: background 0.1s ease, color 0.1s;
+	width: 100%;
+	height: 36px;
+	padding: 0 16px;
+
+	&:hover {
+		background: linear-gradient(to bottom, #ffffff, $purple);
+		border: 2px solid $purple-dark;
+		color: $purple-dark;
+	}
+
+	&:active {
+		background: #ffffff;
+		color: $purple-dark;
+	}
+}
+.test-button__text {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100%;
+}
+.test-button__icon {
+	line-height: 1;
+
+	&.test-button__icon_left {
+		margin-right: 16px;
+	}
+
+	&.test-button__icon_right {
+		margin-left: 16px;
+	}
+}
